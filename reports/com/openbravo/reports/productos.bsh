@@ -1,0 +1,25 @@
+/**
+    This script performs some cool foo and then generates a lot of bar.
+ */
+report = new com.openbravo.pos.reports.PanelReportBean();
+report.setTitleKey = ("Menu.Productos");
+report.setReport("/com/openbravo/reports/productos");
+report.setResourceBundle("com/openbravo/reports/productos_messages");
+report.setSentence (
+         "SELECT "+
+         "PRODUCTS.REFERENCE, " +
+         "PRODUCTS.NAME, " +
+         "CATEGORIES.NAME AS CATEGORY" +
+         "FROM PRODUCTS, CATEGORIES " +
+         "WHERE PRODUCTS.CATEGORY = CATEGORIES.ID AND ?(QBF_FILTER)" +
+         "GROUP BY PRODUCTS.REFERENCE, PRODUCTS.NAME " +
+         "ORDER BY PRODUCTS.NAME");
+paramdates = new com.openbravo.pos.reports.JParamsDatesInterval();
+paramdates.setEndDate(com.openbravo.beans.DateUtils.getToday());
+report.addQBFFilter(paramdates);
+report.addField("REFERENCE", com.openbravo.data.loader.Datas.STRING);
+report.addField("NAME", com.openbravo.data.loader.Datas.STRING);
+report.addField("CATEGORY", com.openbravo.data.loader.Datas.STRING);
+
+report;
+

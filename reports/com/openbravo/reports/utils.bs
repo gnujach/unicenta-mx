@@ -1,0 +1,50 @@
+report = new com.openbravo.pos.reports.PanelReportBean();
+report.setTitleKey("Menu.Utils");
+report.setReport("/com/openbravo/reports/utils");
+report.setResourceBundle("com/openbravo/reports/utils_messages");
+
+report.setSentence (
+	"SELECT "+
+            "RECEIPTS.DATENEW AS RECEIPTS_DATENEW, " +                        
+            "TICKETLINES.UNITS AS TICKETLINES_UNITS, " +
+            "TICKETLINES.PRICE AS TICKETLINES_PRICE, " +
+            "PRODUCTS.NAME AS PRODUCTS_NAME, " +
+            "PRODUCTS.PRICEBUY AS PRODUCTS_PRICEBUY," +
+            "PEOPLE.NAME AS PEOPLE_NAME, " +
+            "TICKETLINES.UNITS * PRODUCTS.PRICEBUY AS STOTAL, " +
+            "TICKETLINES.UNITS * TICKETLINES.PRICE AS TOTALVENTA, " +
+            "TICKETLINES.UNITS*TICKETLINES.PRICE -  TICKETLINES.UNITS*PRODUCTS.PRICEBUY AS UTILIDAD, " + 
+            "TICKETLINES.TICKET AS TICKETLINES_TICKET " +
+         "FROM " +
+            "RECEIPTS RECEIPTS INNER JOIN PAYMENTS PAYMENTS ON RECEIPTS.ID = PAYMENTS.RECEIPT " +
+            "INNER JOIN TICKETS TICKETS ON RECEIPTS.ID = TICKETS.ID " +
+            "INNER JOIN TICKETLINES TICKETLINES ON TICKETS.ID = TICKETLINES.TICKET " +
+            "INNER JOIN PEOPLE PEOPLE ON TICKETS.PERSON = PEOPLE.ID " +
+            "INNER JOIN PRODUCTS PRODUCTS ON TICKETLINES.PRODUCT = PRODUCTS.ID " +
+        " WHERE  ?(QBF_FILTER) " +
+        "ORDER BY RECEIPTS.DATENEW DESC" );
+
+	
+        report.addParameter("RECEIPTS.DATENEW");
+	report.addParameter("RECEIPTS.DATENEW");
+	
+	paramdates = new com.openbravo.pos.reports.JParamsDatesInterval();
+	paramdates.setEndDate(com.openbravo.beans.DateUtils.getToday());
+	report.addQBFFilter(paramdates);
+
+
+report.addField("RECEIPTS_DATENEW", com.openbravo.data.loader.Datas.TIMESTAMP);
+report.addField("TICKETLINES_UNITS", com.openbravo.data.loader.Datas.DOUBLE);
+report.addField("TICKETLINES_PRICE", com.openbravo.data.loader.Datas.DOUBLE);
+report.addField("PRODUCTS_NAME", com.openbravo.data.loader.Datas.STRING);
+report.addField("PRODUCTS_PRICEBUY", com.openbravo.data.loader.Datas.DOUBLE);
+report.addField("PEOPLE_NAME", com.openbravo.data.loader.Datas.STRING);
+report.addField("STOTAL", com.openbravo.data.loader.Datas.DOUBLE);
+report.addField("TOTALVENTA", com.openbravo.data.loader.Datas.DOUBLE);
+report.addField("UTILIDAD", com.openbravo.data.loader.Datas.DOUBLE);
+report.addField("TICKETLINES_TICKET", com.openbravo.data.loader.Datas.STRING);
+
+
+report;
+
+

@@ -1,0 +1,7 @@
+import com.openbravo.pos.ticket.TicketLineInfo;
+if (line.getProductID() == null)
+{	
+	java.awt.Toolkit.getDefaultToolkit().beep();
+	JOptionPane.showMessageDialog(null, "Debe de Seleccionar un Articulo", "Alerta!!", JOptionPane.PLAIN_MESSAGE);
+	return 1;
+}
