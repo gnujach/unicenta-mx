@@ -239,8 +239,9 @@ public final class PaymentsEditor extends javax.swing.JPanel implements EditorRe
         m_jreason = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
         jTotal = new com.openbravo.editor.JEditorCurrency();
-        jNotes = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jNotes = new javax.swing.JTextArea();
         jPanel2 = new javax.swing.JPanel();
         m_jKeys = new com.openbravo.editor.JEditorKeys();
 
@@ -257,19 +258,16 @@ public final class PaymentsEditor extends javax.swing.JPanel implements EditorRe
 
         jTotal.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jNotes.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jNotes.setToolTipText("Enter a Comment");
-        jNotes.setMinimumSize(new java.awt.Dimension(100, 25));
-        jNotes.setPreferredSize(new java.awt.Dimension(100, 25));
-        jNotes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jNotesActionPerformed(evt);
-            }
-        });
-
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel1.setText("Concepto");
         jLabel1.setToolTipText("Razón");
+
+        jNotes.setColumns(20);
+        jNotes.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jNotes.setRows(4);
+        jNotes.setToolTipText("Motivo del Movimiento");
+        jNotes.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(jNotes);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -283,9 +281,9 @@ public final class PaymentsEditor extends javax.swing.JPanel implements EditorRe
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jNotes, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(m_jreason, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(57, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -301,12 +299,10 @@ public final class PaymentsEditor extends javax.swing.JPanel implements EditorRe
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jNotes, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addContainerGap(281, Short.MAX_VALUE))
+                    .addComponent(jLabel1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(232, Short.MAX_VALUE))
         );
-
-        jNotes.getAccessibleContext().setAccessibleDescription(null);
 
         add(jPanel3, java.awt.BorderLayout.CENTER);
 
@@ -322,10 +318,6 @@ public final class PaymentsEditor extends javax.swing.JPanel implements EditorRe
         add(jPanel2, java.awt.BorderLayout.LINE_END);
     }// </editor-fold>//GEN-END:initComponents
 
-private void jNotesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNotesActionPerformed
-// TODO add your handling code here:
-}//GEN-LAST:event_jNotesActionPerformed
-
     private void m_jKeysPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_m_jKeysPropertyChange
         // TODO add your handling code here:
     }//GEN-LAST:event_m_jKeysPropertyChange
@@ -335,9 +327,10 @@ private void jNotesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jNotes;
+    private javax.swing.JTextArea jNotes;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
     private com.openbravo.editor.JEditorCurrency jTotal;
     private com.openbravo.editor.JEditorKeys m_jKeys;
     private javax.swing.JComboBox m_jreason;
