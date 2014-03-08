@@ -22,7 +22,7 @@
 
 report = new com.openbravo.pos.reports.PanelReportBean();
 
-report.setTitleKey("Menu.SalesProfit");
+report.setTitleKey("VentasCostoUtilidad");
 report.setReport("/com/openbravo/reports/productsalesprofit");
 report.setResourceBundle("com/openbravo/reports/productsalesprofit_messages");
 

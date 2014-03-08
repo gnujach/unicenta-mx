@@ -66,7 +66,8 @@ public class JProductLineEdit extends javax.swing.JDialog {
         m_jName.setEnabled(m_oLine.getProductID() == null && app.getAppUserView().getUser().hasPermission("com.openbravo.pos.sales.JPanelTicketEdits"));
         m_jPrice.setEnabled(app.getAppUserView().getUser().hasPermission("com.openbravo.pos.sales.JPanelTicketEdits"));
         m_jPriceTax.setEnabled(app.getAppUserView().getUser().hasPermission("com.openbravo.pos.sales.JPanelTicketEdits"));
-        
+        //Evitar que se cambie el precio de un producto
+        m_jPrice.setEnabled(false);
         m_jName.setText(m_oLine.getProperty("product.name"));
         m_jUnits.setDoubleValue(oLine.getMultiply());
         m_jPrice.setDoubleValue(oLine.getPrice()); 
@@ -250,14 +251,20 @@ public class JProductLineEdit extends javax.swing.JDialog {
         jPanel2.add(m_jName);
         m_jName.setBounds(100, 20, 270, 25);
 
+        m_jUnits.setFocusCycleRoot(true);
         m_jUnits.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        m_jUnits.setNextFocusableComponent(m_jPrice);
         jPanel2.add(m_jUnits);
         m_jUnits.setBounds(100, 50, 240, 25);
 
+        m_jPrice.setEnabled(false);
+        m_jPrice.setFocusable(false);
         m_jPrice.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        m_jPrice.setNextFocusableComponent(m_jPriceTax);
         jPanel2.add(m_jPrice);
         m_jPrice.setBounds(100, 80, 240, 25);
 
+        m_jPriceTax.setFocusCycleRoot(true);
         m_jPriceTax.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jPanel2.add(m_jPriceTax);
         m_jPriceTax.setBounds(100, 110, 240, 25);
@@ -350,8 +357,8 @@ public class JProductLineEdit extends javax.swing.JDialog {
 
         getContentPane().add(jPanel3, java.awt.BorderLayout.EAST);
 
-        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-580)/2, (screenSize.height-362)/2, 580, 362);
+        setSize(new java.awt.Dimension(580, 362));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void m_jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_m_jButtonCancelActionPerformed

@@ -25,12 +25,12 @@
 
 report = new com.openbravo.pos.reports.PanelReportBean();
 
-report.setTitleKey("Menu.SaleTaxes");
+report.setTitleKey("Impuestos por Ventas");
 report.setReport("/com/openbravo/reports/saletaxes");
 report.setResourceBundle("com/openbravo/reports/saletaxes_messages");
 
 report.setSentence(
-                "SELECT TICKETS.TICKETID,RECEIPTS.DATENEW, PAYMENTS.PAYMENT, TAXCATEGORIES.NAME, TAXLINES.AMOUNT "+
+                "SELECT TICKETS.TICKETID,RECEIPTS.DATENEW, PAYMENTS.PAYMENT, TAXES.NAME, TAXLINES.AMOUNT "+
 "FROM RECEIPTS, TAXLINES, TAXES, TAXCATEGORIES,TICKETS, PAYMENTS " +
                 "WHERE PAYMENTS.RECEIPT = RECEIPTS.ID AND RECEIPTS.ID = TAXLINES.RECEIPT AND RECEIPTS.ID=TICKETS.ID AND TAXLINES.TAXID = TAXES.ID AND TAXES.CATEGORY = TAXCATEGORIES.ID AND ?(QBF_FILTER) "+
                "ORDER BY RECEIPTS.DATENEW");

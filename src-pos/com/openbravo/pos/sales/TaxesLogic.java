@@ -112,8 +112,7 @@ public class TaxesLogic {
         ticket.setTaxes(tickettaxes);
     }
     
-    public List<TicketTaxInfo> calculateTaxes(TicketLineInfo line) throws TaxesException {
-        
+    public List<TicketTaxInfo> calculateTaxes(TicketLineInfo line) throws TaxesException {        
         TaxesLogicElement taxesapplied = getTaxesApplied(line.getTaxInfo());
         return calculateLineTaxes(line.getSubValue(), taxesapplied);
     }

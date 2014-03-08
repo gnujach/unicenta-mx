@@ -28,7 +28,9 @@ import com.openbravo.pos.ticket.ProductFilterSales;
 import com.openbravo.pos.ticket.ProductInfoExt;
 import com.openbravo.pos.ticket.ProductRenderer;
 import java.awt.*;
+import javax.swing.Action;
 import javax.swing.JFrame;
+
 
 /**
  *
@@ -47,6 +49,7 @@ public class JProductFinder extends javax.swing.JDialog {
     private JProductFinder(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
     }
+    
     /** Creates new form JProductFinder */
     private JProductFinder(java.awt.Dialog parent, boolean modal) {
         super(parent, modal);
@@ -55,7 +58,10 @@ public class JProductFinder extends javax.swing.JDialog {
     private ProductInfoExt init(DataLogicSales dlSales, int productsType) {
         
         initComponents();
+        //jButton3.setMnemonic( KeyEvent.CTRL_MASK);
         
+        
+            
         jScrollPane1.getVerticalScrollBar().setPreferredSize(new Dimension(35, 35));
 
         //ProductFilter jproductfilter = new ProductFilter(app);
@@ -188,14 +194,14 @@ public class JProductFinder extends javax.swing.JDialog {
 
         jListProducts.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jListProducts.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jListProducts.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
-            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
-                jListProductsValueChanged(evt);
-            }
-        });
         jListProducts.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jListProductsMouseClicked(evt);
+            }
+        });
+        jListProducts.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                jListProductsValueChanged(evt);
             }
         });
         jScrollPane1.setViewportView(jListProducts);
@@ -274,7 +280,8 @@ public class JProductFinder extends javax.swing.JDialog {
         }
         
     }//GEN-LAST:event_jButton3ActionPerformed
-    
+  
+            
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton3;

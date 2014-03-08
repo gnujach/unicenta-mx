@@ -5,6 +5,7 @@
 //    Copyright (c) 2009-2012 uniCenta
 //    http://sourceforge.net/projects/unicentaopos
 //
+//    Modificado 7-mar-2014
 //    This file is part of uniCenta oPOS.
 //
 //    uniCenta oPOS is free software: you can redistribute it and/or modify
@@ -75,7 +76,7 @@
         submenu.addPanel("/com/openbravo/images/reports.png", "Menu.UserSells", "/com/openbravo/reports/usersales.bs");
         submenu.addPanel("/com/openbravo/images/reports.png", "Menu.ClosedProducts", "/com/openbravo/reports/closedproducts.bs");
         submenu.addPanel("/com/openbravo/images/reports.png", "Menu.ReportTaxes", "/com/openbravo/reports/taxes.bs");
-        submenu.addPanel("/com/openbravo/images/reports.png", "Menu.SaleTaxes", "/com/openbravo/reports/saletaxes.bs");
+        submenu.addPanel("/com/openbravo/images/reports.png", "Impuestos de Ventas", "/com/openbravo/reports/saletaxes.bs");
         submenu.addPanel("/com/openbravo/images/chart.png", "Menu.SalesChart", "/com/openbravo/reports/chartsales.bs");
         submenu.addPanel("/com/openbravo/images/chart.png", "Menu.ProductSales", "/com/openbravo/reports/productsales.bs");
         submenu.addPanel("/com/openbravo/images/reports.png", "Menu.PaymentReport", "/com/openbravo/reports/paymentreport.bs");
@@ -90,7 +91,7 @@
         submenu.addPanel("/com/openbravo/images/chart.png", "Menu.Top10Sales", "/com/openbravo/reports/top10sales.bs");
         submenu.addPanel("/com/openbravo/images/reports.png", "Menu.SalesProfit", "/com/openbravo/reports/productsalesprofit.bs");
         submenu.addPanel("/com/openbravo/images/reports.png", "Menu.ExtendedByProducts", "/com/openbravo/reports/extproducts.bs");
-	submenu.addPanel("/com/openbravo/images/reports.png", "Menu.SalesProfitc", "/com/openbravo/reports/productsalesprofitc.bs");
+	submenu.addPanel("/com/openbravo/images/reports.png", "Relacion Ventas Utilidad", "/com/openbravo/reports/productsalesprofitc.bs");
     submenu = group.addSubmenu("/com/openbravo/images/maintain.png", "Menu.Maintenance", "com.openbravo.pos.forms.MenuMaintenance");
         submenu.addTitle("Menu.Maintenance.POS");        
         submenu.addPanel("/com/openbravo/images/user.png", "Menu.Users", "com.openbravo.pos.admin.PeoplePanel");
