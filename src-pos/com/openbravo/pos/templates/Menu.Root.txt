@@ -70,8 +70,8 @@
         submenu.addPanel("/com/openbravo/images/reports.png", "Menu.Utils", "/com/openbravo/reports/utils.bs");
     submenu = group.addSubmenu("/com/openbravo/images/sales.png", "Menu.SalesManagement", "com.openbravo.pos.forms.MenuSalesManagement");
         submenu.addTitle("Menu.SalesManagement.Reports");
-        submenu.addPanel("/com/openbravo/images/reports.png", "Menu.CashRegisterLog", "/com/openbravo/reports/cashregisterlog.bs");
-        submenu.addPanel("/com/openbravo/images/reports.png", "Menu.ExtendedCashRegisterLog", "/com/openbravo/reports/extendedcashregisterlog.bs");
+        submenu.addPanel("/com/openbravo/images/reports.png", "Reporte de Movimientos", "/com/openbravo/reports/cashregisterlog.bs");
+        submenu.addPanel("/com/openbravo/images/reports.png", "Reporte de Transacciones Extendido", "/com/openbravo/reports/extendedcashregisterlog.bs");
         submenu.addPanel("/com/openbravo/images/reports.png", "Menu.Closing", "/com/openbravo/reports/closedpos.bs");
         submenu.addPanel("/com/openbravo/images/reports.png", "Menu.UserSells", "/com/openbravo/reports/usersales.bs");
         submenu.addPanel("/com/openbravo/images/reports.png", "Menu.ClosedProducts", "/com/openbravo/reports/closedproducts.bs");
@@ -79,19 +79,20 @@
         submenu.addPanel("/com/openbravo/images/reports.png", "Impuestos de Ventas", "/com/openbravo/reports/saletaxes.bs");
         submenu.addPanel("/com/openbravo/images/chart.png", "Menu.SalesChart", "/com/openbravo/reports/chartsales.bs");
         submenu.addPanel("/com/openbravo/images/chart.png", "Menu.ProductSales", "/com/openbravo/reports/productsales.bs");
-        submenu.addPanel("/com/openbravo/images/reports.png", "Menu.PaymentReport", "/com/openbravo/reports/paymentreport.bs");
-        submenu.addPanel("/com/openbravo/images/reports.png", "Menu.CashFlow", "/com/openbravo/reports/cashflow.bs");
+        submenu.addPanel("/com/openbravo/images/reports.png", "Reporte de Pagos", "/com/openbravo/reports/paymentreport.bs");
+        submenu.addPanel("/com/openbravo/images/reports.png", "Flujo de Efectivo", "/com/openbravo/reports/cashflow.bs");
         submenu.addPanel("/com/openbravo/images/reports.png", "Menu.Utils", "/com/openbravo/reports/utils.bs");
 
 //*** These reports will report an error with Derby DB's due to SQL limitations ***
 //*** You can remove the "//" at the beginning of the line if you are using MySQL, HSQLDB, PostgreSQL, Oracle databases ***
 //*** You will also need to enable in Administration>Resources>Roles>Administrator/Manager & etc ***
-        submenu.addPanel("/com/openbravo/images/reports.png", "Menu.CategorySales", "/com/openbravo/reports/categorysales.bs");
-        submenu.addPanel("/com/openbravo/images/chart.png", "Menu.CategoryProductSalesChart", "/com/openbravo/reports/piesalescat.bs");
+        submenu.addPanel("/com/openbravo/images/reports.png", "Ventas x Categor\u00eda", "/com/openbravo/reports/categorysales.bs");
+        submenu.addPanel("/com/openbravo/images/chart.png", "Gr\u00e1fica de Ventas por Categor\u00eda", "/com/openbravo/reports/piesalescat.bs");
         submenu.addPanel("/com/openbravo/images/chart.png", "Menu.Top10Sales", "/com/openbravo/reports/top10sales.bs");
-        submenu.addPanel("/com/openbravo/images/reports.png", "Menu.SalesProfit", "/com/openbravo/reports/productsalesprofit.bs");
-        submenu.addPanel("/com/openbravo/images/reports.png", "Menu.ExtendedByProducts", "/com/openbravo/reports/extproducts.bs");
+        submenu.addPanel("/com/openbravo/images/reports.png", "Relaci\u00f3n Ganancias x Ventas", "/com/openbravo/reports/productsalesprofit.bs");
+        submenu.addPanel("/com/openbravo/images/reports.png", "Relaci\u00f3n Ganancias x Ventas Extendido", "/com/openbravo/reports/extproducts.bs");
 	submenu.addPanel("/com/openbravo/images/reports.png", "Relacion Ventas Utilidad", "/com/openbravo/reports/productsalesprofitc.bs");
+	submenu.addPanel("/com/openbravo/images/reports.png", "Registro de Ventas por Producto", "/com/openbravo/reports/timeseriesproduct.bs");
     submenu = group.addSubmenu("/com/openbravo/images/maintain.png", "Menu.Maintenance", "com.openbravo.pos.forms.MenuMaintenance");
         submenu.addTitle("Menu.Maintenance.POS");        
         submenu.addPanel("/com/openbravo/images/user.png", "Menu.Users", "com.openbravo.pos.admin.PeoplePanel");
