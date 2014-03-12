@@ -163,7 +163,7 @@ public class AppUser {
         m_oldclasses.put("net.adrianromero.tpv.panels.JPanelPayments", "com.openbravo.pos.panels.JPanelPayments");
         m_oldclasses.put("net.adrianromero.tpv.panels.JPanelCloseMoney", "com.openbravo.pos.panels.JPanelCloseMoney");
         m_oldclasses.put("net.adrianromero.tpv.reports.JReportClosedPos", "/com/openbravo/reports/closedpos.bs");
-
+        m_oldclasses.put("net.adrianromero.tpv.panelsales.JPanelTicketEditsAdmin", "com.openbravo.pos.sales.JPanelTicketEditsAdmin");
 //        m_oldclasses.put("payment.cash", "");
 //        m_oldclasses.put("payment.cheque", "");
 //        m_oldclasses.put("payment.paper", "");
