@@ -71,7 +71,7 @@ public class JTicketsBagSimple extends JTicketsBag {
         setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         m_jDelTicket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/openbravo/images/sale_delete.png"))); // NOI18N
-        m_jDelTicket.setToolTipText("Delete current Sale");
+        m_jDelTicket.setToolTipText("Eliminar Venta Actual");
         m_jDelTicket.setFocusPainted(false);
         m_jDelTicket.setFocusable(false);
         m_jDelTicket.setMargin(new java.awt.Insets(8, 14, 8, 14));

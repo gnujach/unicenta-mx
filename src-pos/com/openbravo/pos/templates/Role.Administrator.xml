@@ -142,7 +142,9 @@
 <class name="com.openbravo.pos.inventory.MarcasPanel"/>
 <!-- Permisos para reporte de Utilidad -->
   <class name="/com/openbravo/reports/utils.bs"/>
-  
+<!-- Permisos para usar la calculadora -->
+<class name="button.calculadora"/>
+
 
 
 

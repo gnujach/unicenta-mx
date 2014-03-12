@@ -19,7 +19,7 @@
 
 report = new com.openbravo.pos.reports.PanelReportBean();
 
-report.setTitleKey("Menu.CashFlow");
+report.setTitleKey("Flujo de Efectivo");
 report.setReport("/com/openbravo/reports/cashflow");
 report.setResourceBundle("com/openbravo/reports/cashflow_messages");
 

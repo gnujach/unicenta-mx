@@ -195,7 +195,7 @@ public class JPanelEmployeePresence extends javax.swing.JPanel implements JPanel
         jScrollPane1 = new javax.swing.JScrollPane();
         message = new javax.swing.JLabel();
 
-        btnCheckIn.setText("Check In");
+        btnCheckIn.setText("Checar Entrada");
         btnCheckIn.setMaximumSize(new java.awt.Dimension(85, 23));
         btnCheckIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,7 +203,7 @@ public class JPanelEmployeePresence extends javax.swing.JPanel implements JPanel
             }
         });
 
-        btnCheckOut.setText("Check Out");
+        btnCheckOut.setText("Checkar Salida");
         btnCheckOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCheckOutActionPerformed(evt);

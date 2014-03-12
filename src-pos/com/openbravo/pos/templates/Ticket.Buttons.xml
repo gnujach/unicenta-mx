@@ -18,6 +18,8 @@
 
     You should have received a copy of the GNU General Public License
     along with uniCenta oPOS.  If not, see <http://www.gnu.org/licenses/>.
+    Ultima Modificacion 12 de Marzo 2014 by jach 
+    @gnujach
  -->
  
 <!-- To ENABLE a feature remove the beginning and of line commentors -->
@@ -43,7 +45,8 @@
 
 	<!-- SET Ticket Print Preview (Default=ENABLED) -->
     	<button key="button.print" image="img.ticket_print" template="Printer.TicketPreview"/>
-
+        <!-- Button para calculadora de windows en win7 -->
+        <button key="button.calculadora" image="img.calculator" code="script.calculadora"/>
 	<!-- SET Open Cashdrawer (Default=ENABLED) -->
 	<button key="button.opendrawer" image="img.cashdrawer" template="Printer.OpenDrawer"/>
 <!-- END Sales Ticket Button Bar - Show icons -->

@@ -19,7 +19,9 @@
 
 -- Database create script for MySQL
 -- Copyright (c) 2009-2012 uniCenta
--- v3.01
+-- v3.004
+-- Modified 13/Marzo/2014 by jach 
+-- @gnujach
 
 CREATE TABLE APPLICATIONS (
     ID VARCHAR(255) NOT NULL,
@@ -137,7 +139,8 @@ INSERT INTO RESOURCES(ID, NAME, RESTYPE, CONTENT) VALUES('55', 'Window.Logo', 1,
 INSERT INTO RESOURCES(ID, NAME, RESTYPE, CONTENT) VALUES('56', 'Window.Title', 0, $FILE{/com/openbravo/pos/templates/Window.Title.txt});
 INSERT INTO RESOURCES(ID, NAME, RESTYPE, CONTENT) VALUES('57', 'event.addline', 0, $FILE{/com/openbravo/pos/templates/event.addline});
 INSERT INTO RESOURCES(ID, NAME, RESTYPE, CONTENT) VALUES('58', 'script.insertClientToSaved', 0, $FILE{/com/openbravo/pos/templates/script.insertClientToSaved});
-
+INSERT INTO RESOURCES(ID, NAME, RESTYPE, CONTENT) VALUES('61', 'img.calculator', 1, $FILE{/com/openbravo/pos/templates/img.calculator.png});
+INSERT INTO RESOURCES(ID, NAME, RESTYPE, CONTENT) VALUES('62', 'script.calculadora', 1, $FILE{/com/openbravo/pos/templates/script.calculadora});
 CREATE TABLE TAXCUSTCATEGORIES (
     ID VARCHAR(255) NOT NULL,
     NAME VARCHAR(255) NOT NULL,

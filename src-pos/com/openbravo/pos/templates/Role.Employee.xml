@@ -33,7 +33,9 @@
     <class name="payment.cheque"/>
     <class name="payment.paper"/>
     <class name="payment.magcard"/>
+    <!--
     <class name="payment.free"/>
+    -->
     <class name="refund.cash"/>
     <class name="refund.cheque"/>
     <class name="refund.paper"/>
@@ -51,5 +53,6 @@
     <class name="button.linediscount"/>
 <!--    <class name="button.totaldiscount"/> -->
 <!--    <class name="button.scharge"/> -->
-
+<!-- Permisos para usar la calculadora -->
+<class name="button.calculadora"/>
 </permissions>

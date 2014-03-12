@@ -350,7 +350,7 @@ public class JTicketsFinder extends javax.swing.JDialog implements EditorCreator
         jTxtEndDate.setPreferredSize(new java.awt.Dimension(200, 25));
 
         btnDateStart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/openbravo/images/date.png"))); // NOI18N
-        btnDateStart.setToolTipText("Open Calendar");
+        btnDateStart.setToolTipText("Fecha Inicial");
         btnDateStart.setPreferredSize(new java.awt.Dimension(50, 25));
         btnDateStart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -359,7 +359,7 @@ public class JTicketsFinder extends javax.swing.JDialog implements EditorCreator
         });
 
         btnDateEnd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/openbravo/images/date.png"))); // NOI18N
-        btnDateEnd.setToolTipText("Open Calendar");
+        btnDateEnd.setToolTipText("Fecha Final");
         btnDateEnd.setPreferredSize(new java.awt.Dimension(50, 25));
         btnDateEnd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -371,7 +371,7 @@ public class JTicketsFinder extends javax.swing.JDialog implements EditorCreator
         jtxtCustomer.setPreferredSize(new java.awt.Dimension(200, 25));
 
         btnCustomer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/openbravo/images/customer_sml.png"))); // NOI18N
-        btnCustomer.setToolTipText("Open Customers");
+        btnCustomer.setToolTipText("Cliente");
         btnCustomer.setFocusPainted(false);
         btnCustomer.setFocusable(false);
         btnCustomer.setMargin(new java.awt.Insets(8, 14, 8, 14));
@@ -465,7 +465,7 @@ public class JTicketsFinder extends javax.swing.JDialog implements EditorCreator
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/openbravo/images/reload.png"))); // NOI18N
         jButton1.setText(AppLocal.getIntString("button.clean")); // NOI18N
-        jButton1.setToolTipText("Clear Filter");
+        jButton1.setToolTipText("Limpiar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -475,7 +475,7 @@ public class JTicketsFinder extends javax.swing.JDialog implements EditorCreator
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/openbravo/images/ok.png"))); // NOI18N
         jButton3.setText(AppLocal.getIntString("button.executefilter")); // NOI18N
-        jButton3.setToolTipText("Execute Filter");
+        jButton3.setToolTipText("Ejecutar");
         jButton3.setFocusPainted(false);
         jButton3.setFocusable(false);
         jButton3.setRequestFocusEnabled(false);
@@ -558,8 +558,8 @@ public class JTicketsFinder extends javax.swing.JDialog implements EditorCreator
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.LINE_END);
 
-        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-695)/2, (screenSize.height-527)/2, 695, 527);
+        setSize(new java.awt.Dimension(695, 527));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     private void jcmdOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcmdOKActionPerformed
         selectedTicket = (FindTicketsInfo) jListTickets.getSelectedValue();

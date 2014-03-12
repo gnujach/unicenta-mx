@@ -19,7 +19,7 @@
 
 report = new com.openbravo.pos.reports.PanelReportBean();
 
-report.setTitleKey("Menu.PaymentReport");
+report.setTitleKey("Reporte de Pagos");
 report.setReport("/com/openbravo/reports/paymentreport");
 report.setResourceBundle("com/openbravo/reports/paymentreport_messages");
 

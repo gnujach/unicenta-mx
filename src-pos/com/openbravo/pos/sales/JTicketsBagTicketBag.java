@@ -66,7 +66,7 @@ public class JTicketsBagTicketBag extends javax.swing.JPanel {
 
         m_jBtnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/openbravo/images/sale_delete.png"))); // NOI18N
         m_jBtnDelete.setText(AppLocal.getIntString("Button.DeleteTicket")); // NOI18N
-        m_jBtnDelete.setToolTipText("Delete current Ticket");
+        m_jBtnDelete.setToolTipText("Eliminar Ticket Actual");
         m_jBtnDelete.setFocusPainted(false);
         m_jBtnDelete.setFocusable(false);
         m_jBtnDelete.setMargin(new java.awt.Insets(8, 14, 8, 14));
@@ -80,7 +80,7 @@ public class JTicketsBagTicketBag extends javax.swing.JPanel {
 
         m_jBtnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/openbravo/images/cancel.png"))); // NOI18N
         m_jBtnCancel.setText(AppLocal.getIntString("Button.Cancel")); // NOI18N
-        m_jBtnCancel.setToolTipText("Cancel Action");
+        m_jBtnCancel.setToolTipText("Cancelar");
         m_jBtnCancel.setFocusPainted(false);
         m_jBtnCancel.setFocusable(false);
         m_jBtnCancel.setMargin(new java.awt.Insets(8, 14, 8, 14));

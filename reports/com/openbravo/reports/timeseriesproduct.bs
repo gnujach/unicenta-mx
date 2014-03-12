@@ -19,7 +19,7 @@
 
 report = new com.openbravo.pos.reports.PanelReportBean();
 
-report.setTitleKey("Menu.TimeSeriesProduct");
+report.setTitleKey("Registro de Ventas por Producto");
 report.setReport("/com/openbravo/reports/timeseriesproduct");
 report.setResourceBundle("com/openbravo/reports/timeseriesproduct_messages");
 
